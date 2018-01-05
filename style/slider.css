@@ -1,0 +1,91 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #cc2b5e;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #753a88, #cc2b5e);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #753a88, #cc2b5e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* ********** CONTAINER STYLE ************* */
+
+.container{
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.container > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.legend{
+  /*background: yellow*/
+}
+
+.slider{
+  /*background: blue;*/
+}
+
+aside{
+  text-align: left;
+}
+
+h1{
+  font-size: 2em;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* ********** RECTANGLE LEGEND COLORS ************* */
+
+#rectangle-transportation{
+  color: #5E412F;
+}
+
+#rectangle-food{
+  color: #FCEBB6;
+}
+
+#rectangle-insurance{
+  color: #78C0A8;
+}
+
+#rectangle-entertainment{
+  color: #F07818;
+}
+
+#rectangle-healthcare{
+  color: #F0A830;
+}
+
+
+/* ********** LEGEND STYLE ************* */
+
+.legend{
+  padding-left: 300px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.legend p{
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.4em;
+  text-shadow: 1px 1px 3px black;
+}
+
+/* ********** M4EDIA QUERIES ************* */
+
+@media all and (min-width: 600px){
+  .legend{flex: 1 auto;}
+}
+
+@media all and (min-width: 800px){
+  .slider{flex: 3 0px;}
+  .legendwrap{order: 1;}
+  .slider{order: 2;}
+}
