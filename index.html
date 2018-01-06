@@ -15,7 +15,15 @@
       </header>
 
       <div class="slider">
-        here goes slider
+        <svg width="500" height="500" xlmns="http://www.w3.org/2000/svg">
+          <defs>
+            <marker id="thumbcircle" markerUnits="stroke-width" markerWidth="2" markerHeight="2" refX="1" refY="1" orient="auto">
+              <circle cx="1" cy="1" r=".7" fill="#ffcc"></circle>
+            </marker>
+          </defs>
+          <path id="arcpath1" fill="none" stroke="#cecece" stroke-width="20" />
+          <path id="arc1" fill="none" stroke="#5E412F" stroke-width="20" stroke-linecap="round" style="marker-start: url(#thumbcircle)" />
+        </svg>
       </div>
 
       <aside class="legend legendwrap">
@@ -44,8 +52,6 @@
 
   </div>
 
-  <script type="text/javascript" src="">
-
-  </script>
+  <script type="text/javascript" src="js/circularslider.js"></script>
   </body>
 </html>
