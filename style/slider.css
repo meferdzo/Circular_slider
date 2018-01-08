@@ -1,9 +1,10 @@
 body{
-  margin: 0;
-  padding: 0;
+  max-width: 90%;
   background: #D3CCE3;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ********** CONTAINER STYLE ************* */
@@ -12,6 +13,8 @@ body{
   display: flex;
   flex-flow: row wrap;
   text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .container > * {
@@ -20,9 +23,11 @@ body{
 }
 
 #mycanvas{
- outline: black solid 2px;
+ /*outline: black solid 2px;*/
  /*background-color: blue;*/
  margin-top: 20px;
+ justify-content: center;
+ align-items: center;
 }
 
 .legend{
@@ -43,33 +48,9 @@ h1{
   font-family: 'Ubuntu', sans-serif;
 }
 
-/* ********** RECTANGLE LEGEND COLORS ************* */
-/*
-#rectangle-transportation{
-  color: #5E412F;
-}
-
-#rectangle-food{
-  color: #FCEBB6;
-}
-
-#rectangle-insurance{
-  color: #78C0A8;
-}
-
-#rectangle-entertainment{
-  color: #F07818;
-}
-
-#rectangle-healthcare{
-  color: #F0A830;
-}
-*/
-
 /* ********** LEGEND STYLE ************* */
 
 .legend{
-  padding-left: 200px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -83,6 +64,8 @@ h1{
   text-shadow: 1px 1px 4px black;
   text-align: center;
   max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #transportstyle{
