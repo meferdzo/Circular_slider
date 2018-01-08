@@ -15,36 +15,28 @@
       </header>
 
       <div class="slider">
-        <svg width="500" height="500" xlmns="http://www.w3.org/2000/svg">
-          <defs>
-            <marker id="thumbcircle" markerUnits="stroke-width" markerWidth="2" markerHeight="2" refX="1" refY="1" orient="auto">
-              <circle cx="1" cy="1" r=".7" fill="#ffcc"></circle>
-            </marker>
-          </defs>
-          <path id="arcpath1" fill="none" stroke="#cecece" stroke-width="20" />
-          <path id="arc1" fill="none" stroke="#5E412F" stroke-width="20" stroke-linecap="round" style="marker-start: url(#thumbcircle)" />
-        </svg>
+        <canvas id="mycanvas" width="570" height="570"></canvas>
       </div>
 
       <aside class="legend legendwrap">
         <div class="transportation-legend">
-            <p><span id="rectangle-transportation">■</span> Transportation</p>
+            <p id="transportstyle">Transportation</p>
         </div>
 
         <div class="food-legend">
-            <p><span id="rectangle-food">■</span> Food</p>
+            <p id="foodstyle">Food</p>
         </div>
 
         <div class="insurance-legend">
-            <p><span id="rectangle-insurance">■</span> Insurance</p>
+            <p id="insurancestyle">Insurance</p>
         </div>
 
         <div class="entertainment-legend">
-            <p><span id="rectangle-entertainment">■</span> Entertainment</p>
+            <p id="entertainmentstyle">Entertainment</p>
         </div>
 
         <div class="healthcare-legend">
-            <p><span id="rectangle-healthcare">■</span> Health care</p>
+            <p id="healtcarestyle">Health care</p>
         </div>
 
       </aside>

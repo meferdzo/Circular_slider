@@ -1,35 +1,35 @@
-console.log("Connected!");
+var canvas = document.getElementById('mycanvas');
+var angle = 0;
 
 
-function polarToCartesian(centerX, centerY, radius, angleInDegrees){
-  let angleRadians = (angleInDegrees - 90) * Math.PI / 180.0;
+var ctx = canvas.getContext('2d');
 
-  return{
-    x: centerX + (radius * Math.cos(angleRadians)),
-    y: centerY + (radius * Math.sin(angleRadians))
-  };
+// making sure that canvas is connected to HTML
+if(canvas.getContext){
+    var ctx = canvas.getContext('2d');
+
+    // prepairing draw function and parameters
+    function drawbase(){
+      for(var i = 0; i < 5; i++){
+      //setting parameters for circle
+      var centerx = canvas.width / 2;
+      var centery = canvas.height/ 2;
+      var offset = 1.5 * Math.PI;
+      var radius = 50 * (i + 1);
+
+      //draw circle stlyes
+      ctx.beginPath();
+      ctx.arc(centerx, centery, radius, 1.5 * Math.PI, 3.5 * Math.PI, false);
+      ctx.lineWidth = 35;
+      ctx.setLineDash([12, 1]);
+      ctx.lineDashOffset = 1;
+      ctx.strokeStyle = '#bcbcbc';
+      ctx.stroke();
+      ctx.closePath();
+      }
+    }
+    drawbase();
+
 }
 
-function makeArc(x, y, radius, startAngle, endAngle){
-  let start = polarToCartesian(x, y, radius, endAngle);
-  let end = polarToCartesian(x, y, radius, startAngle);
-  let arcSweep = endAngle - startAngle <= 180 ? "0" : "1";
-
-  return d = [
-    "M", start.x, start.y,
-    "A", radius, radius, 0, arcSweep, 0 , end.x, end.y,
-    //"L", x, y, "Z"
-  ].join(" ");
-}
-
-
-
-//draw arc paths
-document.getElementById('arcpath1')
-  .setAttribute("d", makeArc(250, 250, 120, 0, 359));
-
-
-
-//draw arc
-document.getElementById('arc1')
-  .setAttribute("d", makeArc(250, 250, 120, 0, 110));
+console.log(canvas);
